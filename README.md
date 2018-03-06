@@ -7,7 +7,19 @@ Artifacts are stored in `/var/lib/conan`
 
 See the server conf for configuration details
 
-### note
+### volumes
+
+If running with Docker off of root, the volume will need to be either world writable or in the root group
+
+For a new volume the easiest way is to
+
+1. let docker create the volume dir
+2. chmod the volume dir to 775
+3. container will write to it
+
+The default configuration expects the volume to be at `/var/lib/conan`, but this is not declared as a Docker volume to allow for committing the data dir if so desired.
+
+### production use
 
 The conan documentation advises against using `conan_server` in production
 
