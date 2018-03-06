@@ -7,6 +7,10 @@ Artifacts are stored in `/var/lib/conan`
 
 See the server conf for configuration details
 
+### usage
+
+`docker run -p 9300:9300 jwiii/openshift-conan`
+
 ### volumes
 
 If running with Docker off of root, the volume will need to be either world writable or in the root group
