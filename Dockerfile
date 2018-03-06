@@ -6,9 +6,8 @@ USER root
 
 RUN bash -c 'pip install --no-cache-dir conan'
 
-VOLUME /var/lib/conan
-
-RUN mkdir -p /conan/.conan_server \
+RUN mkdir -p /var/lib/conan \
+ && mkdir -p /conan/.conan_server \
  && chgrp -vR 0 /var/lib/conan /conan \
  && chmod -vR g+rwX /var/lib/conan /conan
 
