@@ -21,7 +21,7 @@ For a new volume the easiest way is to
 2. chmod the volume dir to 775
 3. container will write to it
 
-The default configuration expects the volume to be at `/var/lib/conan`, but this is not declared as a Docker volume to allow for committing the data dir if so desired.
+The default configuration expects the volume to be at `/var/lib/conan`
 
 ### production use
 

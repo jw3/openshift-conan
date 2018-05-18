@@ -13,6 +13,8 @@ RUN mkdir -p /var/lib/conan \
 
 COPY server.conf /conan/.conan_server
 
+VOLUME /var/lib/conan
+
 EXPOSE 9300
 
 USER 1001
